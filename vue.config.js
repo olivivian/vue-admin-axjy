@@ -16,6 +16,7 @@ const name = defaultSettings.title || 'vue Element Admin' // page title
 const port = process.env.port || process.env.npm_config_port || 9527 // dev port
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
+// VUE_APP_BASE_API = undefined
 module.exports = {
   /**
    * You will need to set publicPath if you plan to deploy your site under a sub path,
@@ -32,11 +33,20 @@ module.exports = {
   devServer: {
     port: port,
     open: true,
+    proxy: {
+      [process.env.VUE_APP_BASE_API]: {
+        target: `https://mock.mengxuegu.com/mock/6384b9509433403d6c06892a/axjy`,
+        changeOrigin: true,
+        pathRewrite: {
+          ['^' + process.env.VUE_APP_BASE_API]: ''
+        }
+      }
+    },
     overlay: {
       warnings: false,
       errors: true
     },
-    before: require('./mock/mock-server.js')
+    /*before: require('./mock/mock-server.js')*/
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

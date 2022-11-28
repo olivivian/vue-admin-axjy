@@ -1,5 +1,5 @@
 /**
- * Created by PanJiaChen on 16/11/18.
+ * Object|string|number|Boolean|Array
  */
 
 /**
@@ -336,7 +336,7 @@ export function hasClass(ele, cls) {
 }
 
 /**
- * Add class to element
+ * 增加class类名
  * @param {HTMLElement} elm
  * @param {string} cls
  */
@@ -345,7 +345,7 @@ export function addClass(ele, cls) {
 }
 
 /**
- * Remove class from element
+ * 删除class类名
  * @param {HTMLElement} elm
  * @param {string} cls
  */

@@ -1,8 +1,10 @@
 
 
 
+Axjy123456
 
 ## dependencies
+
 
 ```
 npm install xxx -save  运行依赖，依赖的项该是正常运行该包时所需要的依赖项
