@@ -12,7 +12,15 @@ const componentsRouter = {
     icon: 'component'
   },
   children: [
+
     {
+      path: 'upload',
+      component: () => import('@/views/components-demo/upload/index'),
+      name: 'Upload',
+      meta: { title: '图片文件上传' }
+    }
+
+    /*{
       path: 'tinymce',
       component: () => import('@/views/components-demo/tinymce'),
       name: 'TinymceDemo',
@@ -35,14 +43,14 @@ const componentsRouter = {
       component: () => import('@/views/components-demo/split-pane'),
       name: 'SplitpaneDemo',
       meta: { title: 'SplitPane' }
-    },
-    {
+    },*/
+    /*{
       path: 'avatar-upload',
       component: () => import('@/views/components-demo/avatar-upload'),
       name: 'AvatarUploadDemo',
       meta: { title: 'Upload' }
-    },
-    {
+    },*/
+   /* {
       path: 'dropzone',
       component: () => import('@/views/components-demo/dropzone'),
       name: 'DropzoneDemo',
@@ -95,7 +103,7 @@ const componentsRouter = {
       component: () => import('@/views/components-demo/drag-kanban'),
       name: 'DragKanbanDemo',
       meta: { title: 'Drag Kanban' }
-    }
+    }*/
   ]
 }
 
