@@ -13,6 +13,7 @@
     "element-ui": "^2.15.12",
     "fuse.js": "3.4.4",
     "js-cookie": "^3.0.1",
+    "moment": "^2.29.4",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "screenfull": "4.2.0",

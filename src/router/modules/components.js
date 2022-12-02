@@ -6,9 +6,9 @@ const componentsRouter = {
   path: '/components',
   component: Layout,
   redirect: 'noRedirect',
-  name: 'ComponentDemo',
+  name: 'vue组件',
   meta: {
-    title: 'Components',
+    title: 'vue组件',
     icon: 'component'
   },
   children: [
@@ -16,8 +16,32 @@ const componentsRouter = {
     {
       path: 'upload',
       component: () => import('@/views/components-demo/upload/index'),
-      name: 'Upload',
+      name: 'UploadDemo',
       meta: { title: '图片文件上传' }
+    },
+    {
+      path: 'picker',
+      component: () => import('@/views/components-demo/edit-tree/index'),
+      name: 'EditTree',
+      meta: { title: '可编辑的树' }
+    },
+    {
+      path: 'tree',
+      component: () => import('@/views/components-demo/date-picker/index'),
+      name: 'Datepicker',
+      meta: { title: '时间选择' }
+    },
+    {
+      path: 'tinymce',
+      component: () => import('@/views/components-demo/tinymce/index'),
+      name: 'TinymceDemo',
+      meta: { title: '富文本编辑器' }
+    },
+    {
+      path: 'map',
+      component: () => import('@/views/components-demo/map/index'),
+      name: 'TencentMapDemo',
+      meta: { title: '腾讯地图' }
     }
 
     /*{

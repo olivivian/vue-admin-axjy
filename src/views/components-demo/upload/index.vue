@@ -7,6 +7,10 @@
        />
 
        <h2>上传多图，拖拽排序</h2>
+       <aside>
+           <div>安装：npm i -S vuedraggable</div>
+           <a target="_blank" class="link-type" href="https://github.com/SortableJS/Vue.Draggable">vuedraggable文档</a>
+       </aside>
        <image-drag
                :show-sort="showSort"
                :list="file_list"
@@ -27,7 +31,7 @@ import ImageDrag from '../../../components/ComImageDrag'
 import { Loading } from 'element-ui'
 import { uploadUrl, headers } from '@/utils/common'
 export default {
-  name: 'Upload',
+  name: 'UploadDemo',
   components: {
     xyAvatarUpLoad,
     ImageDrag

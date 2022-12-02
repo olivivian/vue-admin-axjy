@@ -80,7 +80,7 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
   }
@@ -91,8 +91,13 @@ export const constantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
  */
 export const asyncRoutes = [
+  componentsRouter,
+  pageRouter,
+  // chartsRouter,
+  // nestedRouter,
+  // tableRouter,
   {
-    path: '/permission',
+    path: '/权限相关',
     component: Layout,
     redirect: '/permission/page',
     alwaysShow: true, // will always show the root menu
@@ -132,26 +137,6 @@ export const asyncRoutes = [
       }
     ]
   },
-
-  /*{
-    path: '/icon',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/icons/index'),
-        name: 'Icons',
-        meta: { title: 'Icons', icon: 'icon', noCache: true }
-      }
-    ]
-  },*/
-
-  /** when your routing map is too long, you can split it into small modules **/
-  componentsRouter,
-  // chartsRouter,
-  // nestedRouter,
-  // tableRouter,
-  pageRouter,
 
  /* {
     path: '/example',
