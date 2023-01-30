@@ -42,6 +42,12 @@ const componentsRouter = {
       component: () => import('@/views/components-demo/map/index'),
       name: 'TencentMapDemo',
       meta: { title: '腾讯地图' }
+    },
+    {
+      path: 'tableRowHide',
+      component: () => import('@/views/components-demo/table-row-hide'),
+      name: 'tableRowHide',
+      meta: { title: '表格列显隐' }
     }
 
     /*{

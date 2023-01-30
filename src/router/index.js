@@ -83,6 +83,20 @@ export const constantRoutes = [
         meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
+  },
+  {
+    path: '/profile',
+    component: Layout,
+    redirect: '/profile/index',
+    hidden: true,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/profile/index'),
+        name: 'Profile',
+        meta: { title: '个人中心', icon: 'user', noCache: true }
+      }
+    ]
   }
 ]
 
@@ -97,13 +111,13 @@ export const asyncRoutes = [
   // nestedRouter,
   // tableRouter,
   {
-    path: '/权限相关',
+    path: '/permission',
     component: Layout,
     redirect: '/permission/page',
     alwaysShow: true, // will always show the root menu
     name: 'Permission',
     meta: {
-      title: 'Permission',
+      title: '权限相关',
       icon: 'lock',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
@@ -176,7 +190,7 @@ export const asyncRoutes = [
     redirect: 'noRedirect',
     name: 'ErrorPages',
     meta: {
-      title: 'Error Pages',
+      title: '错误页面集',
       icon: '404'
     },
     children: [
@@ -203,7 +217,7 @@ export const asyncRoutes = [
         path: 'log',
         component: () => import('@/views/error-log/index'),
         name: 'ErrorLog',
-        meta: { title: 'Error Log', icon: 'bug' }
+        meta: { title: '错误日志', icon: 'bug' }
       }
     ]
   },
